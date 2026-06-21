@@ -6,13 +6,13 @@ import { getFirestore } from 'firebase/firestore'
 // General > Your apps (Web app) in https://console.firebase.google.com/).
 // No other file needs to change.
 const firebaseConfig = {
- apiKey: "AIzaSyDJXFac5ifBBuY6PZjwSyjrshhjIs0Meaw",
-  authDomain: "kpsschool-5da8c.firebaseapp.com",
-  projectId: "kpsschool-5da8c",
-  storageBucket: "kpsschool-5da8c.firebasestorage.app",
-  messagingSenderId: "1087312453874",
-  appId: "1:1087312453874:web:e17b5932355303c5e8706b",
-  measurementId: "G-JTTBJV04ZS"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 }
 
 const isConfigured = Object.values(firebaseConfig).every(Boolean)
