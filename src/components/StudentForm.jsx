@@ -23,7 +23,7 @@ const fieldMeta = [
     name: 'fatherName',
     label: "Mother's Name",
     type: 'text',
-    placeholder: 'e.g. Imran Khan',
+    placeholder: 'e.g. Ayesha Khan',
     autoComplete: 'off',
   },
   {
