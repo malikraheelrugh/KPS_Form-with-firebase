@@ -16,14 +16,14 @@ const fieldMeta = [
     name: 'studentName',
     label: "Student's Name",
     type: 'text',
-    placeholder: 'e.g. Ayesha Khan',
+    placeholder: 'e.g. Ali Abbas',
     autoComplete: 'name',
   },
   {
     name: 'fatherName',
     label: "Mother's Name",
     type: 'text',
-    placeholder: 'e.g. Ayesha Khan',
+    placeholder: 'e.g. Ayesha ',
     autoComplete: 'off',
   },
   {
@@ -161,7 +161,7 @@ export default function StudentForm() {
           Parental Workshop
         </h1>
         <p className="mt-2 max-w-xl text-sm text-slate">
-          Fill in the details below. To attend the workshop, students must be registered by a parent or guardian. All fields are required.
+          Fill in the details below. To attend the workshop, Mother should be registered by filling the following information.
         </p>
  <div className="mt-4 rounded-2xl bg-white text-black p-6 shadow-sm">
             <h3 className='font-bold'>Event Details:</h3>
