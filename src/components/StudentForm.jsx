@@ -161,7 +161,7 @@ export default function StudentForm() {
           Parental Workshop
         </h1>
         <p className="mt-2 max-w-xl text-sm text-slate">
-          Fill in the details below. To attend the workshop, Mother should be registered by filling the following information.
+          Fill in the details below. To attend the workshop, Mother should  register themselves by filling the below information.
         </p>
  <div className="mt-4 rounded-2xl bg-white text-black p-6 shadow-sm">
             <h3 className='font-bold'>Event Details:</h3>
@@ -172,7 +172,7 @@ export default function StudentForm() {
               <br />
               Venue: Conference Room  KPS Rachna Town
               <br />
-              Topic: Role of  Mother
+              Topic: Role of  Mother in Child Development
             </p>
           </div>
         {!firebaseConfigured && (
