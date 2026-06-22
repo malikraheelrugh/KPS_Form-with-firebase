@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 import { db, firebaseConfigured } from '../firebase'
+import logo from '../components/logo.png'
 
 const initialData = {
   studentName: '',
@@ -27,15 +28,15 @@ const fieldMeta = [
   },
   {
     name: 'registrationNumber',
-    label: 'Registration Number',
+    label: 'Admission Number',
     type: 'text',
-    placeholder: 'e.g. REG-2026-0143',
+    placeholder: 'e.g-0143',
     autoComplete: 'off',
     mono: true,
   },
   {
     name: 'studentClass',
-    label: 'Class',
+    label: 'Class/Section',
     type: 'text',
     placeholder: 'e.g. 9th - Section A',
     autoComplete: 'off',
@@ -150,15 +151,17 @@ export default function StudentForm() {
   return (
     <div className="min-h-screen bg-paper px-4 py-10 sm:py-16 font-body text-ink">
       <div className="mx-auto max-w-5xl">
+        <div className="flex justify-center mb-8">
+          <img src={logo} alt="Logo" className="h-48 w-auto" />
+        </div>
         <p className="font-mono text-xs tracking-[0.2em] text-accentDark uppercase">
           Registration
         </p>
         <h1 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-ink">
-          Student Enrollment Form
+          Parental Workshop
         </h1>
         <p className="mt-2 max-w-xl text-sm text-slate">
-          Fill in the details below. Every field is required — the record is
-          saved to Firestore once everything checks out.
+          Fill in the details below. To attend the workshop, students must be registered by a parent or guardian. All fields are required.
         </p>
 
         {!firebaseConfigured && (
@@ -188,10 +191,10 @@ export default function StudentForm() {
                   </svg>
                 </div>
                 <h2 className="mt-4 font-display text-xl font-semibold">
-                  Registration saved
+                  Thank You 
                 </h2>
                 <p className="mt-1 text-sm text-slate">
-                  The student record has been added to the database.
+                  The student {formData.firstName} {formData.lastName} has been registered successfully.
                 </p>
                 <button
                   type="button"
@@ -267,6 +270,7 @@ export default function StudentForm() {
           </div>
 
           {/* Live ID card preview */}
+          <div>
           <div className="mt-8 md:mt-0 rounded-2xl bg-ink text-white p-6 shadow-sm">
             <p className="font-mono text-[10px] tracking-[0.2em] text-white/50 uppercase">
               Student ID Preview
@@ -299,7 +303,21 @@ export default function StudentForm() {
               </div>
             </div>
           </div>
+          <div className="mt-4 rounded-2xl bg-white text-black p-6 shadow-sm">
+            <h3 className='font-bold'>Event Details:</h3>
+            <p className="text-sm text-black/80 mt-2">
+              Date:July 3,2026 (Friday)
+              <br />
+              Time: 10:00 AM - 12:30 PM
+              <br />
+              Venue: Conference Room  KPS Rachna Town
+            </p>
+          </div>
+          </div>
         </div>
+      </div>
+      <div className="text-center text-sm text-black/50 mt-4">
+        {/* Powered by Raheel Abbas */}
       </div>
     </div>
   )
