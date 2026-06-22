@@ -21,7 +21,7 @@ const fieldMeta = [
   },
   {
     name: 'fatherName',
-    label: "Father's Name",
+    label: "Mother's Name",
     type: 'text',
     placeholder: 'e.g. Imran Khan',
     autoComplete: 'off',
@@ -163,7 +163,18 @@ export default function StudentForm() {
         <p className="mt-2 max-w-xl text-sm text-slate">
           Fill in the details below. To attend the workshop, students must be registered by a parent or guardian. All fields are required.
         </p>
-
+ <div className="mt-4 rounded-2xl bg-white text-black p-6 shadow-sm">
+            <h3 className='font-bold'>Event Details:</h3>
+            <p className="text-sm text-black/80 mt-2">
+              Date:July 3,2026 (Friday)
+              <br />
+              Time: 10:00 AM - 12:30 PM
+              <br />
+              Venue: Conference Room  KPS Rachna Town
+              <br />
+              Topic: Role of  Mother
+            </p>
+          </div>
         {!firebaseConfigured && (
           <div className="mt-6 rounded-lg border border-accent/30 bg-accent/10 px-4 py-3 text-sm text-accentDark">
             <strong className="font-semibold">Setup needed:</strong> add your
@@ -303,16 +314,7 @@ export default function StudentForm() {
               </div>
             </div>
           </div>
-          <div className="mt-4 rounded-2xl bg-white text-black p-6 shadow-sm">
-            <h3 className='font-bold'>Event Details:</h3>
-            <p className="text-sm text-black/80 mt-2">
-              Date:July 3,2026 (Friday)
-              <br />
-              Time: 10:00 AM - 12:30 PM
-              <br />
-              Venue: Conference Room  KPS Rachna Town
-            </p>
-          </div>
+         
           </div>
         </div>
       </div>
