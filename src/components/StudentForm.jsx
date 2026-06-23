@@ -19,14 +19,14 @@ const fieldMeta = [
     placeholder: 'e.g. Ali Abbas',
     autoComplete: 'name',
   },
-  {
-    name: 'fatherName',
-    label: "Mother's Name",
+   {
+    name: 'studentClass',
+    label: 'Class/Section',
     type: 'text',
-    placeholder: 'e.g. Ayesha ',
+    placeholder: 'e.g. 9th - Section A',
     autoComplete: 'off',
   },
-  {
+   {
     name: 'registrationNumber',
     label: 'Admission Number',
     type: 'text',
@@ -35,10 +35,10 @@ const fieldMeta = [
     mono: true,
   },
   {
-    name: 'studentClass',
-    label: 'Class/Section',
+    name: 'fatherName',
+    label: "Mother's Name",
     type: 'text',
-    placeholder: 'e.g. 9th - Section A',
+    placeholder: 'e.g. Ayesha ',
     autoComplete: 'off',
   },
   {
@@ -155,24 +155,27 @@ export default function StudentForm() {
           <img src={logo} alt="Logo" className="h-48 w-auto" />
         </div>
         <p className="font-mono text-xs tracking-[0.2em] text-accentDark uppercase">
-          Registration
+          {/* Registration */}
         </p>
         <h1 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-ink">
-          Parental Workshop
+          Parental Workshop 
         </h1>
-        <p className="mt-2 max-w-xl text-sm text-slate">
+        <h4 className='text-accent font-bolder'>(For Mother's only)</h4>
+        {/* <p className="mt-2 max-w-xl text-sm text-slate">
           Fill in the details below. To attend the workshop, Mother should  register themselves by filling the below information.
-        </p>
- <div className="mt-4 rounded-2xl bg-white text-black p-6 shadow-sm">
-            <h3 className='font-bold'>Event Details:</h3>
+        </p> */}
+ <div className="mt-4 rounded-2xl bg-white text-black p-4 shadow-sm">
+            {/* <h3 className='font-bold'>Event Details:</h3> */}
             <p className="text-sm text-black/80 mt-2">
-              Date:July 3,2026 (Friday)
+              on July 4,2026 (Saturday)
               <br />
-              Time: 10:00 AM - 12:30 PM
+              From 11:00 AM to 1:00 PM
               <br />
               Venue: Conference Room  KPS Rachna Town
               <br />
-              Topic: Role of  Mother in Child Development
+              Topic: <span className='font-bold'>Role of  Mother in Child Development</span>
+              <br />
+              <p className='text-red-500 font-bolder italic '>Please register yourself till 3 july 2026 by filling the below information</p>
             </p>
           </div>
         {!firebaseConfigured && (
