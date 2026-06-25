@@ -160,14 +160,14 @@ export default function StudentForm() {
         <h1 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-ink">
           Parental Workshop 
         </h1>
-        <h4 className='text-accent font-bolder'>(For Mother's only)</h4>
+        <h4 className='text-red-900 text-lg font-bold'>(For Mother's only)</h4>
         {/* <p className="mt-2 max-w-xl text-sm text-slate">
           Fill in the details below. To attend the workshop, Mother should  register themselves by filling the below information.
         </p> */}
  <div className="mt-4 rounded-2xl bg-white text-black p-4 shadow-sm">
             {/* <h3 className='font-bold'>Event Details:</h3> */}
             <p className="text-sm text-black/80 mt-2">
-              on July 4,2026 (Saturday)
+              On July 7,2026 (Tuesday)
               <br />
               From 11:00 AM to 1:00 PM
               <br />
@@ -208,7 +208,7 @@ export default function StudentForm() {
                   Thank You 
                 </h2>
                 <p className="mt-1 text-sm text-slate">
-                  The student {formData.firstName} {formData.lastName} has been registered successfully.
+                  The student {formData.fatherName}  has been registered successfully.
                 </p>
                 <button
                   type="button"
@@ -287,19 +287,19 @@ export default function StudentForm() {
           <div>
           <div className="mt-8 md:mt-0 rounded-2xl bg-ink text-white p-6 shadow-sm">
             <p className="font-mono text-[10px] tracking-[0.2em] text-white/50 uppercase">
-              Student ID Preview
+              Registration Preview
             </p>
             <h3 className="mt-2 font-display text-lg font-semibold truncate">
               {formData.studentName || 'Student name'}
             </h3>
             <p className="text-sm text-white/60 truncate">
-              {formData.fatherName ? `S/O ${formData.fatherName}` : "Father's name"}
+              {formData.fatherName ? `S/O ${formData.fatherName}` : "Mother's name"}
             </p>
 
             <div className="mt-5 border-t border-white/15 pt-4 space-y-3">
               <div>
                 <p className="text-[10px] tracking-wide text-white/40 uppercase">
-                  Registration No.
+                  Admission No.
                 </p>
                 <p className="font-mono text-sm text-accent">
                   {formData.registrationNumber || '—'}
