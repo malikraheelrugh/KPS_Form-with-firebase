@@ -322,7 +322,7 @@ export default function StudentForm() {
         </div>
       </div>
       <div className="text-center text-sm text-black/50 mt-4">
-        {/* Powered by Raheel Abbas */}
+        Powered by Raheel Abbas
       </div>
     </div>
   )
